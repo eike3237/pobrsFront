@@ -1,0 +1,49 @@
+.root{
+    display: flex;
+}
+.produto-list{
+    display: grid;
+    column-gap: 1.6rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 16px 40px 2px;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    padding: 0.2rem 1.1rem;
+    align-items: center;
+    align-content: center;
+    border-radius: 6px;
+    margin: 1rem 0rem;
+}
+
+.card .buttons {
+    align-items: center;
+    margin: 0 9px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0rem;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.card .button button:hover{
+    background: #ffcf02;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.card .buttons button {
+    align-items: center;
+    margin: 4px 9px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 0rem;
+    overflow: hidden;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    display: grid;
+    grid-template-columns: 1fr;
+}
