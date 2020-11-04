@@ -90,21 +90,6 @@ class CriarCliente extends Component {
                             />
                         </div>
                         <div className="cliente-insert">
-                            <label htmlFor="password">Senha*</label>
-                            <br />
-                            <input 
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="senha"
-                            minLength="6" 
-                            maxLength="16" 
-                            required 
-                            value= {this.state.cliente.password}
-                            onChange = {this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
                             <label htmlFor="telefone">Telefone</label>
                             <br />
                             <input 

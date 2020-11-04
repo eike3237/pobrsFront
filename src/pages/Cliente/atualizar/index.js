@@ -11,7 +11,6 @@ class EditarCliente extends Component {
                 nome: "",
                 end: "",
                 email: "",
-                password: "",
                 telefone: "",
                 cpf: "",
                 cep: ""
@@ -102,21 +101,6 @@ class EditarCliente extends Component {
                             required 
                             value = {this.state.cliente.email} 
                             onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="password">Senha*</label>
-                            <br />
-                            <input 
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="senha"
-                            minLength="6" 
-                            maxLength="16" 
-                            required 
-                            value= {this.state.cliente.password}
-                            onChange = {this.handleInputChange}
                             />
                         </div>
                         <div className="cliente-insert">
