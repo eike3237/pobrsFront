@@ -12,7 +12,7 @@ export default class Main extends Component {
                 <p> Seja bem vindo a loja, entre e confira nossos itens</p>
                 <Link to="/clientes"><button type="button"> Clientes </button></Link>
                 <Link to="/produtos"><button>Produtos Vitrine</button></Link>
-                <Link to="/"><button>Pedidos</button></Link>
+                <Link to="/pedidos"><button>Pedidos</button></Link>
                 
             </div>
         )

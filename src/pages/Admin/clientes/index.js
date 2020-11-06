@@ -33,7 +33,10 @@ export default class Main extends Component {
                         <strong>Nome = {cliente.nome}</strong>
                         <p>CPF = {cliente.cpf}</p>
                         
-                        <p><Link to={`/clientes/${cliente.id}`}>Clique para detalhes</Link></p>
+                        <p><Link to={`/clientes/${cliente.idCliente}`}>Clique para detalhes</Link></p>
+                        <p><Link to={`/novoPedido`}>Adicionar Pedido</Link></p>
+                        <p><Link to={`/pedidosCliente/${cliente.idCliente}`}>Mostrar Pedidos</Link></p>
+
                         <br/>
                     </article>
 

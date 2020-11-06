@@ -22,6 +22,7 @@ export default class Main extends Component {
 
     render () {
         const { produto } = this.state;
+        //const idCliente = req.params.params.idCliente;
         return (
             <div className="produto-list">
                 {produto.map((produto, index) => (
@@ -35,6 +36,7 @@ export default class Main extends Component {
                             <p>{produto.descricao}</p>
                             <div className="buttons">
                             <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Comprar</button></Link>
+                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Adicionar Pedido</button></Link>
                             </div>
                         </arcticle>
                     </div>

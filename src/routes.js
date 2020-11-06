@@ -9,7 +9,11 @@ import CriarCliente from './pages/Cliente/cadastro/index';
 import EditarCliente from './pages/Cliente/atualizar/index';
 /*Produtos*/
 import EstoqueProdutos from './pages/Cliente/produtos/index';
-import DetalheProduto from './pages/Cliente/detalheProduto/index'
+import DetalheProduto from './pages/Cliente/detalheProduto/index';
+
+import NovoPedido from './pages/Cliente/novoPedido/index';
+import Pedidos from './pages/Cliente/meusPedidos/index';
+import PedidoCliente from './pages/Cliente/clientePedidos/index';
 
 
 const Routes = () => (
@@ -23,8 +27,12 @@ const Routes = () => (
             <Route exact path="/criarCliente" component={CriarCliente}/>
             <Route exact path="/admin/atualizarCliente/:id" component={EditarCliente}/>
 
-            <Route exact path="/produtos" component={EstoqueProdutos}/>
+            <Route path="/produtos" component={EstoqueProdutos}/>
             <Route exact path="/produtosDetail/:id" component={DetalheProduto}/>
+
+            <Route exact path="/novoPedido" component={NovoPedido}/>
+            <Route exact path="/pedidos" component={Pedidos}/>
+            <Route exact path="/pedidos/:idCliente" component={PedidoCliente}/>
 
         </Switch>
     
