@@ -23,25 +23,36 @@ export default class Main extends Component {
 
     render () {
         const { cliente } = this.state;
-        return cliente.map((cliente, index) => (
 
-            <div className="cliente-list">
-                <div key={index} className="card mb-4">
-                    <h5 className="card-header">{cliente.nome}</h5>
-
-                    <article key={cliente._id}>
-                        <strong>Nome = {cliente.nome}</strong>
-                        <p>CPF = {cliente.cpf}</p>
-                        
-                        <p><Link to={`/clientes/${cliente.idCliente}`}>Clique para detalhes</Link></p>
-                        <p><Link to={`/novoPedido`}>Adicionar Pedido</Link></p>
-                        <p><Link to={`/pedidosCliente/${cliente.idCliente}`}>Mostrar Pedidos</Link></p>
-
-                        <br/>
-                    </article>
-
-                </div>
+        return(
+            <>
+            <div className="Clientes-Options">
+            <p><Link to={`/criarCliente`}>Novo Cliente</Link></p>
             </div>
-        ))
+            
+            <cbody>
+                {cliente.map((cliente, index) => (
+
+                    <div className="cliente-list">
+                        <div key={index} className="card mb-4">
+                            <h5 className="card-header">{cliente.nome}</h5>
+
+                            <article key={cliente._id}>
+                                <strong>Nome = {cliente.nome}</strong>
+                                <p>CPF = {cliente.cpf}</p>
+                                
+                                <p><Link to={`/clientes/${cliente.idCliente}`}>Clique para detalhes</Link></p>
+                                <p><Link to={`/novoPedido`}>Adicionar Pedido</Link></p>
+                                <p><Link to={`/pedidos/${cliente.idCliente}`}>Mostrar Pedidos</Link></p>
+
+                                <br/>
+                            </article>
+
+                        </div>
+                    </div>
+                ))}
+            </cbody>
+            </>
+        )
     };
 }

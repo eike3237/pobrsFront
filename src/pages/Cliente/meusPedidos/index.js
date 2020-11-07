@@ -36,6 +36,10 @@ export default class Pedidos extends Component {
                         <br/>
                     </article>
 
+                    <Link to={`#`}>
+                    <button type="button" class="btn btn-outline-danger">Deletar Pedido
+                    </button></Link>
+
                 </div>
             </div>
         ))
