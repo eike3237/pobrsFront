@@ -37,6 +37,8 @@ body {
 }
 
 .control:hover {
-    box-shadow: 3px 3px 9px 3px #424242;
+    box-shadow: 4px 4px 12px 4px #424242;
     transform: scale(1.1);
+    background-color: #4949db;
+    color: white;
 }

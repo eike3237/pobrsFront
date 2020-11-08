@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './clientePedidos.css';
 
 export default class PedidoCliente extends Component {
     state = { /*PQ AQUI DIFERENTE DO QUE MOSTRA TODOS OS CLIENTES É SÓ STATE E NÃO UM CONSTRUTOR*/
@@ -30,17 +30,15 @@ export default class PedidoCliente extends Component {
             <body>
                 {pedido.map((pedido, index) => (
                 
-
-                    <div className="pedido-info">
-                    <p>CLIENTE PEDIDO</p>
-                        <h1> {pedido.nomeProd}</h1>
-                        <h2>ID Cliente: {pedido.idCliente}</h2>
-                        <h2>Preço: R${pedido.precoVenda}</h2>
-                        
-
-                        <Link to={`/clientes`}>Voltar</Link> <br />
+                    <div className="info-base">
+                        <div className="pedido-info">
+                        <h2>Pedido Cliente</h2>
+                            <h1>Produto: {pedido.nomeProd}</h1>
+                            <h3>ID Cliente: {pedido.idCliente}</h3>
+                            <h3>Preço: R$ {pedido.precoVenda}</h3>
+                            <Link to={`/clientes`}><button className="btn-pedido-infos">Voltar</button></Link>
+                        </div>
                     </div>
-
                 ))}
             </body>
             </>

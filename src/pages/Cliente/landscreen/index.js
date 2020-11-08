@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Landscreen.css';
+import Engrenagem from "./engrenagem.png";
 
 export default class Main extends Component {
 
@@ -8,8 +9,11 @@ export default class Main extends Component {
         return (
             <div className="landing">
                 <div className="title">
-                    <h1> Painel de Controle </h1>
+                    <h1> Painel de Controle</h1>
                 </div> 
+                <div className="rotate">
+                    <img src={Engrenagem} width="30" height="30" />
+                </div>
                 <div className="base-controls">
                     <div className="controls">
                         <Link to="/clientes"><button className="control"> Clientes </button></Link>
