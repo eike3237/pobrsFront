@@ -28,13 +28,13 @@ const Routes = () => (
             <Route exact path="/clientes" component={MainCliente}/>
             <Route exact path="/clientes/:id" component={DetalhesCliente}/>
             <Route exact path="/criarCliente" component={CriarCliente}/>
-            <Route exact path="/admin/atualizarCliente/:id" component={EditarCliente}/>
+            <Route exact path="/editarCliente/:id" component={EditarCliente}/>
             <Route exact path="/deleteCliente/:id" component={DeletarCliente}/>
 
             <Route path="/produtos" component={EstoqueProdutos}/>
-            <Route exact path="/produtosDetail/:id" component={DetalheProduto}/>
-            <Route exact path="/cadastro/produto" component={CadastrarProduto}/>
-            <Route exact path="/deleteProduto/:id" component={DeletarProduto}/>
+            <Route exact path="/produtosDetail/:idProduto" component={DetalheProduto}/>
+            <Route exact path="/cadastroProduto" component={CadastrarProduto}/>
+            <Route exact path="/deleteProduto/:idProduto" component={DeletarProduto}/>
 
             <Route exact path="/novoPedido" component={NovoPedido}/>
             <Route exact path="/pedidos" component={Pedidos}/>

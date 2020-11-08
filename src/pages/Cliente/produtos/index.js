@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './produtos.css';
 
 export default class Main extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ export default class Main extends Component {
         return (
             <>
             <div className="Clientes-Options">
-            <button><Link to={`/cadastro/produto`}>Inserir novo produto</Link></button>
+            <button><Link to={`/cadastroProduto`}>Inserir novo produto</Link></button>
             </div>
 
             <div className="produto-list">
@@ -41,7 +41,7 @@ export default class Main extends Component {
                             <p>Preço: R${produto.precoVenda}</p>
                             <p>{produto.descricao}</p>
                             <div className="buttons">
-                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Comprar</button></Link>
+                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Detalhes</button></Link>
                             <Link to={`/deleteProduto/${produto.idProduto}`}><button type="submit">Remover Produto</button></Link>
                             </div>
                         </arcticle>

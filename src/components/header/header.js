@@ -22,10 +22,13 @@ const Header = () => {
                 </a>
             </div>
             <div className="logo--text">
-                <img src={LogoText} />
+                <h2>Elite Games Informática</h2>
             </div>
             <div className="login">
-                <button className="login--button" >Entrar</button>
+                {/*<button className="login--button" >Entrar</button>*/}
+                <a href="/">
+                    <img src={logo} />
+                </a>
             </div>
         </header>
     </>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './meusPedidos.css';
 
 export default class Pedidos extends Component {
     constructor(props) {
@@ -23,25 +23,17 @@ export default class Pedidos extends Component {
     render () {
         const { pedido } = this.state;
         return pedido.map((pedido, index) => (
-
-            <div className="pedido-list">
-                <div key={index} className="card mb-4">
-                    <h5 className="card-header">{pedido.nomeProd}</h5>
-
-                    <article key={pedido._id}>
-                        <strong> Preço: R$ {pedido.precoVenda}</strong>
-                        <p></p>
-                        
-
-                        <br/>
-                    </article>
-
-                    <Link to={`#`}>
-                    <button type="button" class="btn btn-outline-danger">Deletar Pedido
-                    </button></Link>
-
+                <div className="pedido-list">
+                    <div key={index} className="cards-pedidos">
+                        <h3 className="card-header">{pedido.nomeProd}</h3>
+                        <article key={pedido._id}>
+                            <p> Preço: R$ {pedido.precoVenda}</p>
+                        </article>
+                        <Link to={`#`}>
+                        <button type="button" class="btn-danger btn-outline-danger">Deletar Pedido</button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
         ))
     };
 }

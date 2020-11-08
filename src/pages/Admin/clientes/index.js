@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { unstable_renderSubtreeIntoContainer } from 'react-dom';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './Clientes.css';
 
 export default class Main extends Component {
     constructor(props) {
@@ -27,31 +27,34 @@ export default class Main extends Component {
         return(
             <>
             <div className="Clientes-Options">
-            <p><Link to={`/criarCliente`}>Novo Cliente</Link></p>
+                <Link to={`/criarCliente`}><button className="newclient">Novo Cliente</button></Link>
             </div>
             
-            <cbody>
+            <body>
                 {cliente.map((cliente, index) => (
 
                     <div className="cliente-list">
-                        <div key={index} className="card mb-4">
-                            <h5 className="card-header">{cliente.nome}</h5>
-
+                        <div key={index} className="cards">                            
                             <article key={cliente._id}>
-                                <strong>Nome = {cliente.nome}</strong>
-                                <p>CPF = {cliente.cpf}</p>
-                                
-                                <p><Link to={`/clientes/${cliente.idCliente}`}>Clique para detalhes</Link></p>
-                                <p><Link to={`/novoPedido`}>Adicionar Pedido</Link></p>
-                                <p><Link to={`/pedidos/${cliente.idCliente}`}>Mostrar Pedidos</Link></p>
-
-                                <br/>
+                                <div className="content-client">
+                                    <h3>{cliente.nome}</h3>  
+                                </div> 
+                                    <div className="controls-client">                        
+                                        <Link to={`/clientes/${cliente.idCliente}`}>
+                                            <button className="btn-details">Clique para detalhes</button>
+                                        </Link>
+                                        <Link to={`/novoPedido`}>
+                                            <button className="btn-pedido">Adicionar Pedido</button>
+                                        </Link>
+                                        <Link to={`/pedidos/${cliente.idCliente}`}>
+                                            <button className="btn-show">Mostrar Pedidos</button>
+                                        </Link>
+                                    </div>
                             </article>
-
                         </div>
                     </div>
                 ))}
-            </cbody>
+            </body>
             </>
         )
     };

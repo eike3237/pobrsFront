@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import './index.css';
+import './cadastroProduto.css';
 
 class CadastrarProduto extends Component {
     constructor(props){
@@ -39,51 +39,51 @@ class CadastrarProduto extends Component {
             return <Redirect to="/produtos"/>
         } else {
             return (
-                <form onSubmit={this.handleSubmit}>
-                    <fieldset>
-                        <legend>Inserir novo Produto</legend>
-                        <div className="produto-insert">
-                            <label htmlFor="nome">Nome do produto* </label>
-                            <br />
-                            <input type="text" id= "nome" name="nome" placeholder="nome" minLength="3" 
-                            maxLength="100" required value={this.state.produto.nome} onChange={this.handleInputChange}/>
+                <div className="main-base-p">
+                    <form onSubmit={this.handleSubmit}>
+                        <div>
+                            <h1>Inserir novo Produto</h1>
+                            <div className="produto-insert">
+                                <label htmlFor="nome">Nome do produto* </label>
+                                <input type="text" id= "nome" name="nome" placeholder="nome" minLength="3" 
+                                maxLength="100" required value={this.state.produto.nome} 
+                                onChange={this.handleInputChange} className="product-name" />
+                            </div>
+                            <div className="produto-insert">
+                                <label htmlFor="precoCusto">Preço de custo* </label>
+                                <input type="text" id= "precoCusto" name="precoCusto" placeholder= "Preço de custo" 
+                                minLength = "2" maxLength = "100" required value= {this.state.produto.precoCusto} 
+                                onChange={this.handleInputChange} className="price-product" />
+                            </div>
+                            <div className="produto-insert">
+                                <label htmlFor="precoVenda">Preço de venda* </label>
+                                <input type="text" id= "precoVenda" name="precoVenda" placeholder ="Preço de Venda" 
+                                minLength = "2" maxLength = "100" required value = {this.state.produto.precoVenda} 
+                                onChange={this.handleInputChange} className="price-sell" />
+                            </div>
+                            <div className="produto-insert">
+                                <label htmlFor="catProduto">Categoria do produto</label>
+                                <input type= "text" id="catProduto" name="catProduto" 
+                                placeholder="Numero categoria do produto" minLength="0"  maxLength="3" 
+                                value={this.state.produto.catProduto} onChange={this.handleInputChange} 
+                                className="product-category" />
+                            </div>
+                            <div className="produto-insert">
+                                <label htmlFor="descricao">Descrição do produto*</label>
+                                <input type="text" id="descricao" name="descricao" placeholder="descrição" 
+                                minLength="10" maxLength="250" required value={this.state.produto.descricao} 
+                                onChange={this.handleInputChange} className="descript-product" />
+                            </div>
+                            <div className="produto-insert">
+                                <label htmlFor="linkImg">Link/URL imagem do produto</label>
+                                <input type="text" id="linkImg" name="linkImg" placeholder="URL Da imagem" 
+                                minLength="7" maxLength="255" value={this.state.produto.linkImg} 
+                                onChange={this.handleInputChange} className="url" />
+                            </div>
+                            <button type="submit" className="btn-cadastro-product">Cadastrar Produto</button>
                         </div>
-                        <div className="produto-insert">
-                            <label htmlFor="precoCusto">Preço de custo* </label>
-                            <br />
-                            <input type="number" id= "precoCusto" name="precoCusto" placeholder= "Preço de custo" minLength = "2" 
-                            maxLength = "100" required value= {this.state.produto.precoCusto} onChange={this.handleInputChange} />
-                        </div>
-                        <div className="produto-insert">
-                            <label htmlFor="precoVenda">Preço de venda* </label>
-                            <br />
-                            <input type="number" id= "precoVenda" name="precoVenda" placeholder ="Preço de Venda" minLength = "2"
-                            maxLength = "100" required value = {this.state.produto.precoVenda} onChange={this.handleInputChange}  />
-                        </div>
-                        <div className="produto-insert">
-                            <label htmlFor="catProduto">Categoria do produto</label>
-                            <br />
-                            <input type= "number" id="catProduto" name="catProduto" placeholder="Numero categoria do produto" minLength="0" 
-                            maxLength="3" value={this.state.produto.catProduto} onChange={this.handleInputChange} />
-                        </div>
-                        <div className="produto-insert">
-                            <label htmlFor="descricao">Descrição do produto*</label>
-                            <br />
-                            <input type="text" id="descricao" name="descricao" placeholder="descricao" minLength="10" maxLength="250"
-                            required value={this.state.produto.descricao} onChange={this.handleInputChange} />
-                        </div>
-                        <div className="produto-insert">
-                            <label htmlFor="linkImg">Link/URL imagem do produto</label>
-                            <br />
-                            <input type="text" id="linkImg" name="linkImg" placeholder="URL Da imagem" minLength="7" maxLength="255"
-                            value={this.state.produto.linkImg} onChange={this.handleInputChange} />
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                            Cadastrar Produto
-                        </button>
-
-                    </fieldset>
-                </form>
+                    </form>
+                </div>
             )
         }
     }

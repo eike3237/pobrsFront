@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import './detalhesC.css';
 
 export default class Cliente extends Component {
     state = { /*PQ AQUI DIFERENTE DO QUE MOSTRA TODOS OS CLIENTES É SÓ STATE E NÃO UM CONSTRUTOR*/
@@ -25,17 +25,22 @@ export default class Cliente extends Component {
         }*/
 
         return (
-            <div className="cliente-info">
-                <h1>{cliente.nome}</h1>
-                <h2>ID - {cliente.id}</h2>
-                <h2>Endereço - {cliente.end}</h2>
-                <h2>Email - {cliente.email}</h2>
-                <h2>Telefone - {cliente.telefone}</h2>
-                <h2>CPF - {cliente.cpf}</h2>
-                <h2>CEP - {cliente.cep}</h2>
-                <br />
-
-                <Link to={`/admin/clientes`}>Voltar</Link> <br />
+            <div className="base-details">
+                <div className="cliente-info">
+                <h1 className="info-nome">{cliente.nome}</h1>
+                <p className="info-id">ID: {cliente.idCliente}</p>
+                <p className="info-ende">Endereço: {cliente.end}</p>
+                <p className="info-email">Email: {cliente.email}</p>
+                <p className="info-tel">Telefone: {cliente.telefone}</p>
+                <p className="info-CPF">CPF: {cliente.cpf}</p>
+                <p className="info-CEP">CEP: {cliente.cep}</p>
+                <Link to={`/editarCliente/${cliente.idCliente}`}>
+                    <button className="btn-edit">Editar Dados</button>
+                </Link>
+                <Link to={`/clientes`}>
+                    <button className="btn-back">Voltar</button>
+                    </Link>
+                </div>
             </div>
         )
     };
