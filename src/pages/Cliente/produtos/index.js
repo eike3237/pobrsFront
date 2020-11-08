@@ -24,6 +24,11 @@ export default class Main extends Component {
         const { produto } = this.state;
         //const idCliente = req.params.params.idCliente;
         return (
+            <>
+            <div className="Clientes-Options">
+            <button><Link to={`/cadastro/produto`}>Inserir novo produto</Link></button>
+            </div>
+
             <div className="produto-list">
                 {produto.map((produto, index) => (
                     <div key={index} className="card mb-4">
@@ -31,17 +36,19 @@ export default class Main extends Component {
 
                         <arcticle key={produto._id}>
                             <strong>Item: {produto.nome}</strong><br></br>
-                            <img src="#" alt="#"></img>
+                            <img src={`${produto.linkImg}`} alt="#" 
+                            width="300px" height="300px"></img>
                             <p>Preço: R${produto.precoVenda}</p>
                             <p>{produto.descricao}</p>
                             <div className="buttons">
                             <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Comprar</button></Link>
-                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Adicionar Pedido</button></Link>
+                            <Link to={`/deleteProduto/${produto.idProduto}`}><button type="submit">Remover Produto</button></Link>
                             </div>
                         </arcticle>
                     </div>
                 ))}
-            </div> // Colocar handle submit ao adicionar ao carrinho
+            </div> 
+            </>
         )
     };
 }

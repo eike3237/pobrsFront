@@ -79,7 +79,7 @@ class NovoPedido extends Component{
                                 id= "catProduto" 
                                 name="catProduto"
                                 placeholder="categoria" 
-                                minLength="3" 
+                                minLength="0" 
                                 maxLength="100" 
                                 required 
                                 value={this.state.pedido.catProduto} 
@@ -103,6 +103,9 @@ class NovoPedido extends Component{
                         </div>
                         <button type="submit" className="btn btn-primary">
                             Cadastrar Pedido
+                        </button>
+                        <button type="submit" className="btn btn-primary">
+                            Novo Pedido
                         </button>
                     </fieldset>
                 </form>

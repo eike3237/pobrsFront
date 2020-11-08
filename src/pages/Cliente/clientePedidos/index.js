@@ -20,11 +20,7 @@ export default class PedidoCliente extends Component {
 
     render () {
         const { pedido, index } = this.state;
-
-        /*if (cliente.telefone <= 0){
-            cliente.telefone = "000000"
-        }*/
-
+        
         return (
             <>
             <pbody>
