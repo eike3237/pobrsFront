@@ -27,22 +27,22 @@ export default class PedidoCliente extends Component {
 
         return (
             <>
-            <pbody>
+            <body>
                 {pedido.map((pedido, index) => (
                 
 
                     <div className="pedido-info">
                     <p>CLIENTE PEDIDO</p>
-                        <h1>-  {pedido.nomeProd}</h1>
-                        <h2>ID Cliente - {pedido.idCliente}</h2>
-                        <h2>Preço - R${pedido.precoVenda}</h2>
+                        <h1> {pedido.nomeProd}</h1>
+                        <h2>ID Cliente: {pedido.idCliente}</h2>
+                        <h2>Preço: R${pedido.precoVenda}</h2>
                         
 
                         <Link to={`/clientes`}>Voltar</Link> <br />
                     </div>
 
                 ))}
-            </pbody>
+            </body>
             </>
         )
     };

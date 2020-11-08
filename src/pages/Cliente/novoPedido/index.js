@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import './index.css';
+import './novoPedido.css';
 
 class NovoPedido extends Component{
     constructor(props){
@@ -38,74 +38,42 @@ class NovoPedido extends Component{
             // COLOCAR AQUI TBM UM RETURN QUE NEM O DO FORMS DE BAIXO QUE MOSTRA QUE O PEDIDO FOI FEITO
         } else {
             return (
-                <form onSubmit={this.handleSubmit}>
-                    <fieldset>
-                        <legend>Cadastrar novo pedido</legend>
-                        <div className="pedido-insert">
-                            <label htmlFor="nomeProduto">Produto: </label>
-                            <br />
-                            <input 
-                                type="text" 
-                                id= "nomeProd" 
-                                name="nomeProd"
-                                placeholder="Produto" 
-                                minLength="3" 
-                                maxLength="100" 
-                                required 
-                                value={this.state.pedido.nomeProd} 
-                                onChange={this.handleInputChange}
-                            />
+                <div className="base-products">
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="main-products">
+                            <div className="main-title">
+                                <h2>Cadastrar novo pedido</h2>
+                            </div>
+                            <div className="separator">
+                                <div className="pedido-insert">
+                                    <label htmlFor="nomeProduto">Produto: </label>
+                                    <input type="text" id= "nomeProd" name="nomeProd" placeholder="Produto" 
+                                        minLength="3" maxLength="100" required value={this.state.pedido.nomeProd} 
+                                        onChange={this.handleInputChange} className="product" />
+                                </div>
+                                <div className="pedido-insert"> 
+                                    <label htmlFor="nomeProduto">Preço: </label>
+                                    <input type="text" id= "precoVenda" name="precoVenda" placeholder="preço" 
+                                        minLength="3" maxLength="100" required value={this.state.pedido.precoVenda} 
+                                        onChange={this.handleInputChange} className="price" />
+                                </div>
+                                <div className="pedido-insert"> 
+                                    <label htmlFor="nomeProduto">Categoria: </label>
+                                    <input type="text" id= "catProduto" name="catProduto" placeholder="categoria" 
+                                        minLength="3" maxLength="100" required value={this.state.pedido.catProduto} 
+                                        onChange={this.handleInputChange} className="category" />
+                                </div>
+                                <div className="pedido-insert"> 
+                                    <label htmlFor="nomeProduto">ID do cliente: </label>
+                                    <input type="text" id= "idCliente" name="idCliente" placeholder="ID do cliente" 
+                                        minLength="0" maxLength="10" required value={this.state.pedido.idCliente} 
+                                        onChange={this.handleInputChange} className="client-id" />
+                                </div>
+                                <button type="submit" className="btn-CP">Cadastrar Pedido</button>
+                            </div>
                         </div>
-                        <div className="pedido-insert"> 
-                            <label htmlFor="nomeProduto">Preço: </label>
-                            <br />
-                            <input 
-                                type="text" 
-                                id= "precoVenda" 
-                                name="precoVenda"
-                                placeholder="preço" 
-                                minLength="3" 
-                                maxLength="100" 
-                                required 
-                                value={this.state.pedido.precoVenda} 
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="pedido-insert"> 
-                            <label htmlFor="nomeProduto">Categoria: </label>
-                            <br />
-                            <input 
-                                type="text" 
-                                id= "catProduto" 
-                                name="catProduto"
-                                placeholder="categoria" 
-                                minLength="3" 
-                                maxLength="100" 
-                                required 
-                                value={this.state.pedido.catProduto} 
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="pedido-insert"> 
-                            <label htmlFor="nomeProduto">ID do cliente: </label>
-                            <br />
-                            <input 
-                                type="text" 
-                                id= "idCliente" 
-                                name="idCliente"
-                                placeholder="ID do cliente" 
-                                minLength="0" 
-                                maxLength="10" 
-                                required 
-                                value={this.state.pedido.idCliente} 
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                            Cadastrar Pedido
-                        </button>
-                    </fieldset>
-                </form>
+                    </form>
+                </div>
             );
         }
     }
