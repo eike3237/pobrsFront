@@ -10,6 +10,7 @@ import EditarCliente from './pages/Cliente/atualizar/index';
 /*Produtos*/
 import EstoqueProdutos from './pages/Cliente/produtos/index';
 import DetalheProduto from './pages/Cliente/detalheProduto/index';
+import CadastrarProduto from './pages/Cliente/cadastroProduto/index';
 
 import NovoPedido from './pages/Cliente/novoPedido/index';
 import Pedidos from './pages/Cliente/meusPedidos/index';
@@ -25,10 +26,11 @@ const Routes = () => (
             <Route exact path="/clientes" component={MainCliente}/>
             <Route exact path="/clientes/:id" component={DetalhesCliente}/>
             <Route exact path="/criarCliente" component={CriarCliente}/>
-            <Route exact path="/admin/atualizarCliente/:id" component={EditarCliente}/>
+            <Route exact path="/atualizarCliente/:id" component={EditarCliente}/>
 
             <Route path="/produtos" component={EstoqueProdutos}/>
             <Route exact path="/produtosDetail/:id" component={DetalheProduto}/>
+            <Route exact path="/cadastro/produto" component={CadastrarProduto}/>
 
             <Route exact path="/novoPedido" component={NovoPedido}/>
             <Route exact path="/pedidos" component={Pedidos}/>

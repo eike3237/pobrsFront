@@ -1,0 +1,97 @@
+.btn-new {
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    margin-top: 15px;
+    margin-left: 44.5%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 1px 4px 1px #424242;
+    transition: all ease .3s;
+    background-color: white;
+}
+
+.btn-new:hover {
+    box-shadow: 3px 3px 9px 3px #424242;
+    transform: scale(1.1);
+    background-color: green;
+    color: wheat;
+}
+
+.main-base-p {
+    margin-top: 25px;
+    margin-left: 20%;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 3px 3px 9px 3px #424242;
+    width: 800px;
+}
+
+form {
+
+}
+
+form h1 {
+    text-align: center;
+}
+
+.produto-insert {
+    margin-top: 15px;
+}
+
+.produto-insert label {
+    margin-left: 24%;
+}
+
+.produto-insert input {
+    width: 240px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 2px 8px 2px #424242;
+    text-align: center;
+}
+
+.product-name {
+    margin-left: 11.5%;
+}
+
+.price-product {
+    margin-left: 13.9%;
+}
+
+.price-sell {
+    margin-left: 13.5%;
+}
+
+.product-category {
+    margin-left: 10.2%;
+}
+
+.descript-product {
+    margin-left: 9%;
+}
+
+.url {
+    margin-left: 2.7%;
+}
+
+.btn-cadastro-product {
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 160px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 2px 2px 8px 2px #424242;
+    transition: all ease .3s;
+}
+
+.btn-cadastro-product:hover {
+    box-shadow: 2px 2px 8px 2px #424242;
+    background-color: #4242c5;
+    color: white;
+    transform: scale(1.1);
+}

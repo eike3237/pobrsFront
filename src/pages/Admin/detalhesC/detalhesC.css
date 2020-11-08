@@ -27,7 +27,7 @@
     border-radius: 15px;
     border: none;
     float: right;
-    margin-top: -80px;
+    margin-top: -50px;
     margin-right: 20px;
     box-shadow: 2px 2px 8px 2px #424242;
     transition: all ease .3s;
@@ -37,5 +37,26 @@
     transform: scale(1.1);
     box-shadow: 4px 4px 12px 4px #424242;
     background-color: #4242c5;
+    color: white;
+}
+
+.btn-edit {
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    border: none;
+    float: right;
+    margin-top: -100px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 8px 2px #424242;
+    transition: all ease .3s;
+}
+
+.btn-edit:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 12px 4px #424242;
+    background-color: rgb(224, 224, 11);
     color: white;
 }

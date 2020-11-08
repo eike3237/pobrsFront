@@ -34,7 +34,12 @@ export default class Cliente extends Component {
                 <p className="info-tel">Telefone: {cliente.telefone}</p>
                 <p className="info-CPF">CPF: {cliente.cpf}</p>
                 <p className="info-CEP">CEP: {cliente.cep}</p>
-                <Link to={`/clientes`}><button className="btn-back">Voltar</button></Link>
+                <Link to={`/atualizarCliente/${cliente.idCliente}`}>
+                    <button className="btn-edit">Editar Dados</button>
+                </Link>
+                <Link to={`/clientes`}>
+                    <button className="btn-back">Voltar</button>
+                    </Link>
                 </div>
             </div>
         )

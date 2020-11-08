@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import './index.css';
+import './atualizar.css';
 
 class EditarCliente extends Component {
     constructor (props) {
@@ -55,105 +55,53 @@ class EditarCliente extends Component {
             return <Redirect to="/clientes" />
         } else { 
             return (
-                <form onSubmit={this.handleSubmit}>
-                    <fieldset>
-                        <legend>Atualize seus dados</legend>
-                        <div className="cliente-insert">
-                            <label htmlFor="nome">Nome* </label>
-                            <br />
-                            <input 
-                                type="text" 
-                                id= "nome" 
-                                name="nome"
-                                placeholder="nome" 
-                                minLength="3" 
-                                maxLength="100" 
-                                required 
-                                value={this.state.cliente.nome} 
-                                onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="end">Endereço* </label>
-                            <br />
-                            <input 
-                            type="text" 
-                            id= "end" 
-                            name= "end" 
-                            placeholder= "endereco" 
-                            minLength = "5" 
-                            maxLength = "100"
-                            required 
-                            value= {this.state.cliente.end} 
-                            onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="email">E-mail* </label>
-                            <br />
-                            <input 
-                            type="email" 
-                            id= "email" 
-                            name="email" 
-                            placeholder ="e-mail"
-                            minLength = "11"
-                            maxLength = "100"
-                            required 
-                            value = {this.state.cliente.email} 
-                            onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="telefone">Telefone</label>
-                            <br />
-                            <input 
-                            type= "tel" 
-                            id="telefone" 
-                            name="telefone" 
-                            placeholder="Telefone" 
-                            minLength="8" 
-                            maxLength="13" 
-                            value={this.state.cliente.telefone}
-                            onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="cpf">CPF*</label>
-                            <br />
-                            <input 
-                            type="text" 
-                            id="cpf" 
-                            name="cpf"
-                            placeholder="CPF" 
-                            minLength="11" 
-                            maxLength="14"
-                            required
-                            value={this.state.cliente.cpf} 
-                            onChange={this.handleInputChange}
-                            />
-                        </div>
-                        <div className="cliente-insert">
-                            <label htmlFor="cep">CEP*</label>
-                            <br />
-                            <input 
-                            type="text" 
-                            id="cep" 
-                            name="cep"
-                            placeholder="CEP" 
-                            minLength="7" 
-                            maxLength="8"
-                            required
-                            value={this.state.cliente.cep} 
-                            onChange={this.handleInputChange}
-                            />
-                        </div>
+                <div className="take">
+                    <form onSubmit={this.handleSubmit}>
+                        <div>
+                            <h1>Atualize seus dados</h1>
+                            <div className="cliente-insert">
+                                <label htmlFor="nome">Nome* </label>
+                                <input 
+                                    type="text" id= "nome" name="nome" placeholder="nome" minLength="3" 
+                                    maxLength="100" required value={this.state.cliente.nome} 
+                                    onChange={this.handleInputChange} className="name" />
+                            </div>
+                            <div className="cliente-insert">
+                                <label htmlFor="end">Endereço* </label>
+                                <input 
+                                type="text" id= "end" name= "end" placeholder= "endereco" minLength = "5" 
+                                maxLength = "100" required value= {this.state.cliente.end} 
+                                onChange={this.handleInputChange} />
+                            </div>
+                            <div className="cliente-insert">
+                                <label htmlFor="email">E-mail* </label>
+                                <input type="email" id= "email" name="email" placeholder ="e-mail" minLength = "11"
+                                maxLength = "100" required value = {this.state.cliente.email} 
+                                onChange={this.handleInputChange} className="email" />
+                            </div>
+                            <div className="cliente-insert">
+                                <label htmlFor="telefone">Telefone</label>
+                                <input type= "tel" id="telefone" name="telefone" placeholder="Telefone" minLength="8" 
+                                maxLength="13" value={this.state.cliente.telefone}
+                                onChange={this.handleInputChange} className="tel" />
+                            </div>
+                            <div className="cliente-insert">
+                                <label htmlFor="cpf">CPF*</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="CPF" minLength="11" 
+                                maxLength="14" required value={this.state.cliente.cpf} 
+                                onChange={this.handleInputChange} className="cpfw" />
+                            </div>
+                            <div className="cliente-insert">
+                                <label htmlFor="cep">CEP*</label>
+                                <input type="text" id="cep" name="cep" placeholder="CEP" minLength="7" 
+                                maxLength="8" required value={this.state.cliente.cep} 
+                                onChange={this.handleInputChange} className="cepw" />
+                            </div>
 
-                        <button type="submit" className="btn btn-primary">
-                            Atualizar
-                        </button>
-
-                    </fieldset>
-                </form>
+                            <button type="submit" className="btn-atualiza">Atualizar</button>
+                        </div>
+                    </form>
+                </div>
             );
         }
     }//fim render
