@@ -49,6 +49,9 @@ export default class Main extends Component {
                                         <Link to={`/pedidos/${cliente.idCliente}`}>
                                             <button className="btn-show">Mostrar Pedidos</button>
                                         </Link>
+                                        <Link to={`/deleteCliente/${cliente.idCliente}`}>
+                                            <button className="btn-deletar">Deletar</button>
+                                        </Link>
                                     </div>
                             </article>
                         </div>

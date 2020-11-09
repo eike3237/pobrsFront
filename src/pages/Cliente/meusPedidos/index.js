@@ -29,7 +29,7 @@ export default class Pedidos extends Component {
                         <article key={pedido._id}>
                             <p> Preço: R$ {pedido.precoVenda}</p>
                         </article>
-                        <Link to={`#`}>
+                        <Link to={`/deletePedido/${pedido.idPedido}`}>
                         <button type="button" class="btn-danger btn-outline-danger">Deletar Pedido</button>
                         </Link>
                     </div>

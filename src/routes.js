@@ -17,6 +17,7 @@ import DeletarProduto from './pages/Cliente/deletarProduto/index';
 import NovoPedido from './pages/Cliente/novoPedido/index';
 import Pedidos from './pages/Cliente/meusPedidos/index';
 import PedidoCliente from './pages/Cliente/clientePedidos/index';
+import DeletarPedido from './pages/Cliente/deletarPedido/index';
 
 
 const Routes = () => (
@@ -39,6 +40,7 @@ const Routes = () => (
             <Route exact path="/novoPedido" component={NovoPedido}/>
             <Route exact path="/pedidos" component={Pedidos}/>
             <Route exact path="/pedidos/:idCliente" component={PedidoCliente}/>
+            <Route exact path="/deletePedido/:idPedido" component={DeletarPedido}/>
 
         </Switch>
     
