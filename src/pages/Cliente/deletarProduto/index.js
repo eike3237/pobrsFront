@@ -29,7 +29,7 @@ class DeletarProduto extends Component {
     componentDidMount() {
         const { idProduto } = this.props.match.params;
 
-        fetch(`http://localhost:3003/sistema/produtos/${idProduto}`)
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/produtos/${idProduto}`)
         .then(data => {
             data.json().then(data => {
                 if (data.error) {
@@ -71,7 +71,7 @@ class DeletarProduto extends Component {
     handleClick = event => {
         const { idProduto } = this.props.match.params;
 
-        fetch(`http://localhost:3003/sistema/deleteProduto/${idProduto}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/deleteProduto/${idProduto}`, {
             method: "delete"
         })
             .then(data => {

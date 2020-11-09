@@ -90,7 +90,7 @@ class NovoPedido extends Component{
     };
 
     handleSubmit = event => { // Usar isso na rota /id/produtos para usar a rota pro carrinho com metodo post
-        fetch(`http://localhost:3003/sistema/novoPedido/${this.state.pedido.idCliente}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/novoPedido/${this.state.pedido.idCliente}`, {
             method: "post",
             body: JSON.stringify(this.state.pedido),
             headers: {

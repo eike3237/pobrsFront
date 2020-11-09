@@ -11,7 +11,7 @@ export default class PedidoCliente extends Component {
     componentDidMount () {/*Aparentemente verifica o componente td vez q foi montado pra ver se n tem nenhum erro*/
         const { idCliente } = this.props.match.params; /*Pesquisar sobre esse tipo*/
         
-        fetch(`http://localhost:3003/sistema/pedidos/${idCliente}`)
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/pedidos/${idCliente}`)
             .then(pedido =>
                 pedido.json().then(pedido => this.setState({ pedido }))
                 )

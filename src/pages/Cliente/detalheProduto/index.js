@@ -10,7 +10,7 @@ export default class Produto extends Component {
     componentDidMount () {/*Aparentemente verifica o componente td vez q foi montado pra ver se n tem nenhum erro*/
         const { idProduto } = this.props.match.params; /*Pesquisar sobre esse tipo*/
         
-        fetch(`http://localhost:3003/sistema/produtos/${idProduto}`)
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/produtos/${idProduto}`)
             .then(produto =>
                 produto.json().then(produto => this.setState({ produto }))
                 )

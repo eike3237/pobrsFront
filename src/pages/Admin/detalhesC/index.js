@@ -10,7 +10,7 @@ export default class Cliente extends Component {
     componentDidMount () {/*Aparentemente verifica o componente td vez q foi montado pra ver se n tem nenhum erro*/
         const { id } = this.props.match.params; /*Pesquisar sobre esse tipo*/
         
-        fetch(`http://localhost:3003/sistema/clientes/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/clientes/${id}`)
             .then(cliente =>
                 cliente.json().then(cliente => this.setState({ cliente }))
                 )
