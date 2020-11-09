@@ -37,7 +37,8 @@ export default class Main extends Component {
                         <div key={index} className="cards">                            
                             <article key={cliente._id}>
                                 <div className="content-client">
-                                    <h3>{cliente.nome}</h3>  
+                                    <h3>{cliente.nome}</h3>
+                                    <h4>ID - {cliente.idCliente}</h4>
                                 </div> 
                                     <div className="controls-client">                        
                                         <Link to={`/clientes/${cliente.idCliente}`}>
