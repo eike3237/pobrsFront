@@ -11,10 +11,11 @@ header {
     background-color: #4242f5;
     width: 100%;
     border-bottom: 1px solid #fff;
+    min-width: 100%;
 }
 
 body {
-    max-width: 1366px;
+    max-width: 100%;
 }
 
 .logo--image {

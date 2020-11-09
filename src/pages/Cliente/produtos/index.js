@@ -25,24 +25,23 @@ export default class Main extends Component {
         //const idCliente = req.params.params.idCliente;
         return (
             <>
-            <div className="Clientes-Options">
-            <button><Link to={`/cadastroProduto`}>Inserir novo produto</Link></button>
+            <div className="produto-Options">
+            <Link to={`/cadastroProduto`}><button>Inserir novo produto</button></Link>
             </div>
 
             <div className="produto-list">
                 {produto.map((produto, index) => (
                     <div key={index} className="card mb-4">
-                        <h5 className="card-header">{produto.nome}</h5>
+                        <h3 className="card-header">{produto.nome}</h3>
 
                         <arcticle key={produto._id}>
-                            <strong>Item: {produto.nome}</strong><br></br>
                             <img src={`${produto.linkImg}`} alt="#" 
                             width="300px" height="300px"></img>
                             <p>Preço: R${produto.precoVenda}</p>
-                            <p>{produto.descricao}</p>
+                            <p>Descrição: {produto.descricao}</p>
                             <div className="buttons">
-                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit">Detalhes</button></Link>
-                            <Link to={`/deleteProduto/${produto.idProduto}`}><button type="submit">Remover Produto</button></Link>
+                            <Link to={`/produtosDetail/${produto.idProduto}`}><button type="submit"className="btn-cadastro-product">Detalhes</button></Link>
+                            <Link to={`/deleteProduto/${produto.idProduto}`}><button type="submit" className="btn-cadastro-product">Remover Produto</button></Link>
                             </div>
                         </arcticle>
                     </div>
