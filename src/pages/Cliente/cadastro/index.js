@@ -103,7 +103,7 @@ class CriarCliente extends Component {
     };
 
     handleSubmit = event => { // Usar isso na rota /id/produtos para usar a rota pro carrinho com metodo post
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/cadastro/clientes`, {
+        fetch(`https://pobrs-api.herokuapp.com/sistema/cadastro/clientes`, {
             method: "post",
             body: JSON.stringify(this.state.cliente),
             headers: {
