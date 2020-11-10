@@ -16,7 +16,7 @@ export default class Main extends Component {
                 </div>
                 <div className="base-controls">
                     <div className="controls">
-                        <Link to="/clientes"><button className="control"> Clientes </button></Link>
+                        <Link to="/sistema/clientes"><button className="control"> Clientes </button></Link>
                         <Link to="/produtos"><button className="control">Produtos Vitrine</button></Link>
                         <Link to="/pedidos"><button className="control">Pedidos</button></Link>
                     </div>
