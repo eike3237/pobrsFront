@@ -14,7 +14,7 @@ export default class Main extends Component {
     }
 
     componentDidMount () {/*Aparentemente verifica o componente td vez q foi montado pra ver se n tem nenhum erro*/
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/clientes`)
+        fetch(`https://pobrs-api.herokuapp.com/sistema/clientes`)
             .then(cliente =>
                 cliente.json().then(cliente => this.setState({ cliente }))
                 )
